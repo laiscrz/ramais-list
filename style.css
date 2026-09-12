@@ -1,0 +1,603 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --azul: #0b3b60;
+    --azul-escuro: #082d49;
+    --azul-claro: #eaf3f8;
+    --texto: #243746;
+    --cinza: #667784;
+    --fundo: #f5f7f9;
+    --branco: #ffffff;
+    --borda: #dce4e9;
+    --dourado: #c8a45d;
+    --vermelho: #c94b4b;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    line-height: 1.5;
+}
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+header {
+    background: linear-gradient(
+        135deg,
+        var(--azul-escuro),
+        var(--azul)
+    );
+
+    color: white;
+    padding: 42px 24px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, .12);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.eyebrow {
+    color: #d8c18b;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+header h1 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #d9e7ef;
+    font-size: 15px;
+}
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.container {
+    width: min(1200px, calc(100% - 32px));
+    margin: 30px auto 60px;
+}
+
+/* ========================================
+   BUSCA
+======================================== */
+
+.search-box {
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, .04);
+}
+
+.search-box input {
+    width: 100%;
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    padding: 13px 15px;
+    font-size: 15px;
+    outline: none;
+    transition: .2s;
+}
+
+.search-box input:focus {
+    border-color: var(--azul);
+    box-shadow: 0 0 0 3px rgba(11, 59, 96, .08);
+}
+
+/* ========================================
+   SEÇÕES
+======================================== */
+
+.section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 17px;
+}
+
+.section-number {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    background: var(--azul);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 13px;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.section-title h2 {
+    color: var(--azul);
+    font-size: 22px;
+}
+
+.section-title span {
+    color: var(--cinza);
+    font-size: 13px;
+}
+
+/* ========================================
+   CARDS
+======================================== */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.card {
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+    padding: 17px;
+
+    transition: .2s;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, .025);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, .07);
+    border-color: #c9d9e2;
+}
+
+.card-name {
+    color: var(--texto);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.card-description {
+    color: var(--cinza);
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.extension {
+    display: inline-block;
+    background: var(--azul-claro);
+    color: var(--azul);
+    border-radius: 7px;
+    padding: 5px 9px;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .3px;
+}
+
+.important {
+    border-left: 4px solid var(--dourado);
+}
+
+.emergency {
+    border-left: 4px solid var(--vermelho);
+}
+
+.emergency .extension {
+    background: #f9e9e9;
+    color: var(--vermelho);
+}
+
+/* ========================================
+   TABELAS
+======================================== */
+
+.table-wrapper {
+    background: var(--branco);
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+    overflow: hidden;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, .035);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: var(--azul);
+    color: white;
+
+    text-align: left;
+
+    padding: 13px 15px;
+
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: .6px;
+}
+
+td {
+    padding: 13px 15px;
+
+    border-bottom: 1px solid #edf1f3;
+
+    font-size: 13px;
+    vertical-align: middle;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background: #f8fafb;
+}
+
+.ramal {
+    color: var(--azul);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* ========================================
+   ACESSOS
+======================================== */
+
+.access-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.access-card {
+    background: white;
+
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+
+    padding: 18px;
+
+    transition: .2s;
+}
+
+.access-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 7px 20px rgba(0, 0, 0, .07);
+
+    border-color: #c9d9e2;
+}
+
+.access-card h3 {
+    color: var(--azul);
+    font-size: 15px;
+    margin-bottom: 9px;
+}
+
+.access-route {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    color: var(--cinza);
+
+    font-size: 13px;
+}
+
+.access-route p {
+    flex: 1;
+}
+
+/* ========================================
+   BOLINHAS
+======================================== */
+
+.ball {
+    width: 17px;
+    height: 17px;
+    min-width: 17px;
+
+    border-radius: 50%;
+
+    margin-top: 2px;
+
+    border: 2px solid rgba(0, 0, 0, .12);
+
+    box-shadow:
+        inset 0 1px 2px rgba(255,255,255,.35),
+        0 1px 3px rgba(0,0,0,.12);
+}
+
+.ball-amarela {
+    background: #f4c542;
+}
+
+.ball-roxa {
+    background: #8e5bb7;
+}
+
+.ball-laranja {
+    background: #ed8b32;
+}
+
+.ball-azul {
+    background: #438dcc;
+}
+
+.ball-verde {
+    background: #55a86b;
+}
+
+.ball-vermelha {
+    background: #d9534f;
+}
+
+.ball-principal {
+    background: #555;
+}
+
+/* ========================================
+   TEXTO DAS CORES
+======================================== */
+
+.route-label {
+    font-weight: 700;
+}
+
+.route-label.amarela {
+    color: #b58a00;
+}
+
+.route-label.roxa {
+    color: #75469c;
+}
+
+.route-label.laranja {
+    color: #c66c17;
+}
+
+.route-label.azul {
+    color: #3273a9;
+}
+
+.route-label.verde {
+    color: #3d854f;
+}
+
+.route-label.vermelha {
+    color: #b83e3a;
+}
+
+.route-label.principal {
+    color: #444;
+}
+
+/* ========================================
+   LEGENDA
+======================================== */
+
+.access-legend {
+    background: white;
+
+    border: 1px solid var(--borda);
+    border-radius: 12px;
+
+    padding: 14px 17px;
+
+    margin-bottom: 16px;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+
+    flex-wrap: wrap;
+}
+
+.legend-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--azul);
+
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    font-size: 12px;
+    color: var(--cinza);
+}
+
+.legend-item .ball {
+    width: 13px;
+    height: 13px;
+    min-width: 13px;
+}
+
+/* ========================================
+   LOCALIZAÇÃO
+======================================== */
+
+.location-card {
+    background: white;
+
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+
+    overflow: hidden;
+}
+
+.location-row {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+
+    border-bottom: 1px solid #edf1f3;
+}
+
+.location-row:last-child {
+    border-bottom: none;
+}
+
+.location-name {
+    background: #f1f6f9;
+
+    padding: 15px;
+
+    color: var(--azul);
+
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.location-info {
+    padding: 15px;
+
+    font-size: 13px;
+    color: var(--cinza);
+}
+
+.obs {
+    display: block;
+
+    margin-top: 8px;
+
+    color: #596c78;
+
+    font-size: 12px;
+}
+
+/* ========================================
+   CONTINGÊNCIA
+======================================== */
+
+.contingency {
+    background: white;
+
+    border: 1px solid var(--borda);
+    border-radius: 14px;
+
+    padding: 20px;
+}
+
+.contingency strong {
+    color: var(--texto);
+}
+
+.contingency a {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 11px 15px;
+
+    border-radius: 9px;
+
+    background: var(--azul);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: .2s;
+}
+
+.contingency a:hover {
+    background: var(--azul-escuro);
+}
+
+/* ========================================
+   RODAPÉ
+======================================== */
+
+footer {
+    text-align: center;
+
+    padding: 28px 20px;
+
+    color: #82909a;
+
+    font-size: 12px;
+}
+
+/* ========================================
+   RESPONSIVO
+======================================== */
+
+@media (max-width: 900px) {
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .access-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 30px 18px;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    .container {
+        width: min(100% - 20px, 1200px);
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .location-row {
+        grid-template-columns: 1fr;
+    }
+
+    .location-name {
+        border-bottom: 1px solid var(--borda);
+    }
+
+    .table-wrapper {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 650px;
+    }
+
+    .access-legend {
+        gap: 12px;
+    }
+}
